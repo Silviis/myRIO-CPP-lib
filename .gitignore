@@ -35,8 +35,10 @@
 .vscode/
 
 # Ignore National Instruments parts
-src/myRIO-CAPI/src/*
+src/myRIO-CAPI/src/
 # Keep the src folder
 !src/myRIO-CAPI/src/.placeholder
 
+! Keep build folder, but ignore contents
 build/*
+!build/.placeholder
