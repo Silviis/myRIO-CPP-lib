@@ -18,6 +18,8 @@ cmake_minimum_required(VERSION 3.14)
 project(helloMyRIO)
 set(EXECUTABLE_OUTPUT_PATH bin)
 set(CMAKE_BUILD_TYPE Debug)
+
+# Define target device
 add_compile_definitions(MyRio_1900)
 
 

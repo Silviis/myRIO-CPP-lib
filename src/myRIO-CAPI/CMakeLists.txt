@@ -8,10 +8,6 @@ project(
 # Add all source files in the src/ directory
 file(GLOB LIB_SOURCES "src/*.c" "src/*.h")
 
-# Define target device
-add_compile_definitions(MyRio_1900)
-
-
 add_library(NIMyRioCAPI STATIC ${LIB_SOURCES})
 
 # Include directories
