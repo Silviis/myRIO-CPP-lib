@@ -1,4 +1,4 @@
-# MYRIO-CPP-WORKSPACE
+# myRIO-cpp-workspace
 
 ## Description
 This repository offers a workspace for developing/cross-compiling C++ applications in Linux environment for the NI myRIO embedded system. It is a easily configurable environment based on the [myWRIO project](https://github.com/eviallet/myWRIO) and the [National Instuments C API](https://www.ni.com/en/support/downloads/software-products/download.c-support-for-myrio.html#329806).
