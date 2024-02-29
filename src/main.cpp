@@ -1,17 +1,13 @@
-#include "MyRIO.h"
-#include <math.h>
-
-using namespace myRIO;
-using namespace std;
-
+#include "myWRIO.h"
+using namespace myWRIO;
 int main() {
-	if(!myRIO_init()) {cout << "Error initializing myRIO"; return -1;}
-
-
-	PWM p(PWMA0, 10e3, 40);
-	Time::wait_s(10);
-
-
-	return 0;
+    if(!myRIO_init()) {std::cout << "Error initializing myRIO"; return -1;}
+  
+    bool status = HIGH;
+  
+    while(1) {
+        status=!status;
+        DIO::writeLed(LED1, status);
+        Time::wait_ms(500);
+    }
 }
-
