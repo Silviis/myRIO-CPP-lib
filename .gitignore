@@ -33,3 +33,8 @@
 
 
 .vscode/
+
+# Ignore National Instruments parts
+src/myRIO-CAPI/src/*
+
+build/*
