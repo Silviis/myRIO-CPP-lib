@@ -1,0 +1,3 @@
+[submodule "src/myWRIO"]
+	path = src/myWRIO
+	url = git@github.com:Silviis/myWRIO.git
