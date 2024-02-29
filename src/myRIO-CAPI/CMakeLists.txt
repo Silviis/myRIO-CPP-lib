@@ -5,26 +5,14 @@ project(
     LANGUAGES C
 )
 
+# Add all source files in the src/ directory
+file(GLOB LIB_SOURCES "src/*.c" "src/*.h")
 
-
+# Define target device
 add_compile_definitions(MyRio_1900)
-set(SOURCE_FILES
-    src/IRQConfigure.c
-    src/MyRio1900.h
-    src/MyRio.h
-    src/NiFpga_MyRio1900Fpga60.h
-    src/NiFpga_MyRio1950Fpga60.lvbitx
-    src/IRQConfigure.h
-    src/MyRio1950.h
-    src/NiFpga.c
-    src/NiFpga_MyRio1900Fpga60.lvbitx
-    src/visa.h
-    src/libvisa.so
-    src/MyRio.c
-    src/NiFpga.h
-    src/NiFpga_MyRio1950Fpga60.h
-    src/visatype.h
-)
 
-add_library(NIMyRioCAPI STATIC ${SOURCE_FILES})
+
+add_library(NIMyRioCAPI STATIC ${LIB_SOURCES})
+
+# Include directories
 target_include_directories(NIMyRioCAPI PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
